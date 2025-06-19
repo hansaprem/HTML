@@ -1,60 +1,118 @@
 body {
-  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #22c1c3, #fdbb2d);
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  background-color: #ffffffdd;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .calculator {
-  background: #222;
+  background-color: #1e293b;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border-radius: 16px;
+  width: 320px;
 }
 
 #display {
   width: 100%;
-  padding: 15px;
-  font-size: 24px;
+  height: 60px;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 28px;
+  padding: 10px;
   text-align: right;
   border: none;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 70px);
-  gap: 15px;
-  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 
 button {
-  padding: 20px;
-  font-size: 20px;
+  height: 60px;
+  font-size: 18px;
   border: none;
   border-radius: 10px;
-  background: #333;
-  color: #fff;
+  background-color: #334155;
+  color: white;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background: #555;
+  background-color: #475569;
 }
 
-button.equal {
-  background-color: #00b894;
-  grid-row: span 2;
+.equal {
+  background-color: #10b981;
 }
 
-button.equal:hover {
-  background-color: #019875;
+.equal:hover {
+  background-color: #059669;
 }
 
-button.zero {
+.zero {
   grid-column: span 2;
+}
+
+.history {
+  width: 220px;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  padding: 20px;
+  max-height: 430px;
+  overflow-y: auto;
+  box-shadow: inset 0 0 5px #ccc;
+}
+
+.history h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #0f172a;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+#historyList {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+#historyList li {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.clear-history {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+.clear-history:hover {
+  background-color: #dc2626;
 }
